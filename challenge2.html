@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p{
+            font-weight:bold ;  
+        }
+    </style>
+    <title>JSON</title>
+</head>
+
+<body>
+    <h1>JSON Example</h1>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        const obj = { "school name": "SBOA", "In the year": 2019, "Rank in the city": 01, "No of students Studying": 1500, };
+        const stringedobj = JSON.stringify(obj);
+        localStorage.setItem("obj", stringedobj);
+
+
+        const obtainedobj = JSON.parse(localStorage.getItem("obj"));
+        let para = "";
+        for (let key in obtainedobj) {
+      para += "<p>"+ key + "=" + obtainedobj[key] + "</p>";
+        }
+        document.getElementById("demo").innerHTML = para;
+    </script>
+</body>
+
+</html>
