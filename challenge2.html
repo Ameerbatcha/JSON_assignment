@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        p{
-            font-weight:bold ;  
+        p {
+            font-weight: bold;
         }
     </style>
     <title>JSON</title>
@@ -25,7 +25,7 @@
         const obtainedobj = JSON.parse(localStorage.getItem("obj"));
         let para = "";
         for (let key in obtainedobj) {
-      para += "<p>"+ key + "=" + obtainedobj[key] + "</p>";
+            para += `<p> ${key}  = ${obtainedobj[key]}  </p>`;
         }
         document.getElementById("demo").innerHTML = para;
     </script>
